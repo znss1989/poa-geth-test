@@ -1,6 +1,7 @@
 const ethers = require('ethers');
 
 module.exports = async (bankWallet, wallets) => {
+  console.log("prefunding start...");
   const initialNonce = await bankWallet.getTransactionCount();
   for (let index = 0; index < wallets.length; ++index) {
     const wallet = wallets[index];

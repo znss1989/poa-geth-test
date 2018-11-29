@@ -6,9 +6,12 @@ const bankData = {"address":"d587a57d659342e4de970f2c5bb5d97c91491671","crypto":
 const bankPassword = "pwd";
 
 module.exports = async () => {
+  console.log("getting bank wallet...");
   const bankJson = JSON.stringify(bankData);
   const provider = getIpcProvider();
-  const wallet = await ethers.Wallet.fromEncryptedJson(bankJson, bankPassword)
+  let wallet;
+  wallet = await ethers.Wallet.fromEncryptedJson(bankJson, bankPassword);
+  
   const bankWallet = wallet.connect(provider);
   return bankWallet
 };

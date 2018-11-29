@@ -3,6 +3,7 @@ const ethers = require('ethers');
 const getIpcProvider = require('./getIpcProvider');
 
 module.exports = (mnemonic, basePath, count) => {
+  console.log("getting wallets...");
   const wallets = [];
   for (let index = 0; index < count; ++index) {
     const path = basePath + index;

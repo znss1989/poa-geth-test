@@ -7,7 +7,7 @@ const prefund = require('./prefund');
 const signTxs = require('./signTxs');
 const broadcastAndGetTiming = require('./broadcastAndGetTiming');
 
-const count = 10000;
+const count = 1000;
 
 const main = async () => {
   // get wallets and bank

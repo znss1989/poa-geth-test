@@ -7,7 +7,7 @@ const prefund = require('./prefund');
 const signTxs = require('./signTxs');
 const broadcastAndGetTiming = require('./broadcastAndGetTiming');
 
-const count = 1000;
+const count = 200;
 
 const main = async () => {
   // get wallets and bank
@@ -22,7 +22,7 @@ const main = async () => {
   // sign transactions
   const signedTxs = await signTxs(bankWallet, wallets);
 
-  // // broadcast amd performance measure
+  // broadcast amd performance measure
   await broadcastAndGetTiming(signedTxs, count);
 };
 
